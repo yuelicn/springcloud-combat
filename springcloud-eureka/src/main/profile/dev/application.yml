@@ -13,13 +13,26 @@ eureka:
     enable-self-preservation: false
     ## 心跳阈值计算周期，如果开启自我保护模式，可以改一下这个配置
     ## renewal-threshold-update-interval-ms: 120000
-    ## 主动失效检测间隔,配置成5秒、默认60000L（60秒）
+    ## #清理间隔（单位毫秒，默认是60*1000）5秒将客户端剔除的服务在服务注册列表中剔除#
     eviction-interval-timer-in-ms: 5000
-    ## 客户端的有效负载缓存应该更新的时间间隔，默认为30 * 1000毫秒
+    ## eureka server刷新readCacheMap的时间，注意，client读取的是readCacheMap，这个时间决定了多久会把readWriteCacheMap的缓存更新到readCacheMap上 #eureka server刷新readCacheMap的时间，注意，client读取的是readCacheMap，这个时间决定了多久会把readWriteCacheMap的缓存更新到readCacheMap上默认30s
     response-cache-update-interval-ms: 3000
+    ## eureka server缓存readWriteCacheMap失效时间，这个只有在这个时间过去后缓存才会失效，失效前不会更新，过期后从registry重新读取注册服务信息，registry是一个ConcurrentHashMap。
+    response-cache-auto-expiration-in-seconds: 180
+    ## 在eureka服务器获取不到集群里对等服务器上的实例时，需要等待的时间，单机默认0
+    wait-time-in-ms-when-sync-empty: 0
+
   client:
+    ## #表示是否将服务注册到Eureka服务端，由于自身就是Eureka服务端，所以设置为false；
     register-with-eureka: false
+    ## 为true时，可以启动，但报异常：Cannot execute request on any known server ，是否从eureka服务端获取注册信息，消费者需要配置true
     fetch-registry: false
+    ## 更新实例信息的变化到Eureka服务端的间隔时间，单位为秒
+    instance-info-replication-interval-seconds: 10
+    ## 从eureka服务端获取注册信息的间隔时间
+    registry-fetch-interval-seconds: 30
+    ## 轮询Eureka服务端地址更改的间隔时间，单位为秒。
+    eureka-service-url-poll-interval-seconds: 300
     service-url:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/  # 注册中心访问地址
 
