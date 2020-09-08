@@ -29,3 +29,5 @@ spring:
     user:
       name: admin
       password: admin
+  application:
+    name: springcloud-eureka
