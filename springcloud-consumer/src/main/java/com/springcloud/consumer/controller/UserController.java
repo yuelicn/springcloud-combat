@@ -22,6 +22,7 @@ public class UserController {
 
     @GetMapping("/info")
     public ResponseData getUserInfoByUserId(@RequestParam("id") Integer id) {
+
         UserInfo userInfo = userService.findUserInfoById(id);
         return ResponseData.success(userInfo);
     }

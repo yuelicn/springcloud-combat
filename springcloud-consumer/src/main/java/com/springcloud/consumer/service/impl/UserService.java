@@ -7,6 +7,7 @@ import com.springcloud.consumer.vo.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestOperations;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.HashMap;
@@ -19,13 +20,13 @@ import java.util.Map;
 @Service
 public class UserService implements IUserService {
 
-    @Autowired(required = true)
-    RestTemplate restTemplate;
+    @Autowired
+    RestOperations restTemplate;
 
     @Override
     public UserInfo findUserInfoById(Integer id) {
         Map<String, Object> map = new HashMap<>();
-        ResponseEntity<ResponseData> forEntity = restTemplate.getForEntity("http://localhost:8081/user/info?id=1",
+        ResponseEntity<ResponseData> forEntity = restTemplate.getForEntity("http://springcloud-provider/user/info?id=1",
                 ResponseData.class, map);
 //        ResponseEntity<ResponseData> exchange = restTemplate.exchange("http://localhost:8081/user/info?id=1",
 //                HttpMethod.GET, null, ResponseData.class, 1, 9);

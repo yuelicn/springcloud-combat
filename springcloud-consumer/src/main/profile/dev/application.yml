@@ -5,7 +5,6 @@ eureka:
   client:
     service-url:
       defaultZone: http://admin:admin@172.17.73.236:9000/eureka/
-    registry-refresh-single-vip-address: 5 #eureka client刷新本地缓存时间，默认30
   instance:
     prefer-ip-address: true
     lease-expiration-duration-in-seconds: 7  #Eureka服务端在收到最后一次心跳之后等待的时间上限，单位为秒，超过则剔除（客户端告诉服务端按照此规则等待自己），默认90
@@ -15,3 +14,6 @@ spring:
   application:
     name: springcloud-consumer
 
+ribbon:
+  ReadTimeout: 100
+  ConnectTimeout: 150
