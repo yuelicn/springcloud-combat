@@ -3,6 +3,7 @@ package com.springcloud.consumer.controller;
 import com.springcloud.common.response.ResponseData;
 import com.springcloud.consumer.service.IUserService;
 import com.springcloud.consumer.vo.UserInfo;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,6 +21,7 @@ public class UserController {
     @Autowired
     IUserService userService;
 
+    @ApiOperation(value = "获取用户信息")
     @GetMapping("/info")
     public ResponseData getUserInfoByUserId(@RequestParam("id") Integer id) {
 
