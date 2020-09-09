@@ -17,6 +17,7 @@ public class UserController {
     @GetMapping("/info")
     public ResponseData<UserInfo> getUerInfoById(@RequestParam Integer id) {
         UserInfo userInfo = new UserInfo(1, "张三",  0);
+        System.out.println("====================:" + userInfo.toString());
         return ResponseData.success(userInfo);
     }
 }
