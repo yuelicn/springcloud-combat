@@ -8,6 +8,7 @@
         <module>springcloud-eureka</module>
         <module>springcloud-provider</module>
         <module>springcloud-api-common</module>
+        <module>springcloud-consumer</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -21,10 +22,15 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>springcloud-combat</name>
     <description>Demo project for Spring Boot</description>
-
+    <!--管理第三方jar版本-->
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
+        <fastjson.version>1.2.73</fastjson.version>
+        <springfox.swagger2.version>2.9.2</springfox.swagger2.version>
+        <springfox.swagger.ui.version>2.9.2</springfox.swagger.ui.version>
+        <swagger.annotations.version>1.5.22</swagger.annotations.version>
+        <swagger.models.version>1.5.22</swagger.models.version>
     </properties>
 
     <dependencies>
@@ -51,7 +57,7 @@
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
-            <version>2.9.2</version>
+            <version>${springfox.swagger2.version}</version>
             <exclusions>
                 <!-- 默认使用的是1.5.20版本，太老了，会出现：For input string: "" 问题 -->
                 <exclusion>
@@ -67,18 +73,23 @@
         <dependency>
             <groupId>io.swagger</groupId>
             <artifactId>swagger-annotations</artifactId>
-            <version>1.5.22</version>
+            <version>${swagger.annotations.version}</version>
         </dependency>
         <dependency>
             <groupId>io.swagger</groupId>
             <artifactId>swagger-models</artifactId>
-            <version>1.5.22</version>
+            <version>${swagger.models.version}</version>
         </dependency>
 
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
-            <version>2.9.2</version>
+            <version>${springfox.swagger.ui.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
         </dependency>
     </dependencies>
 
@@ -137,19 +148,32 @@
             </properties>
         </profile>
     </profiles>
-
+    <!--第三方maven私服-->
     <repositories>
         <repository>
-            <id>tusdao</id>
-            <name>Tusdao Repository</name>
-            <url>http://maven.tusdao.com:8082/nexus/content/groups/public/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
+            <id>nexus-aliyun</id>
+            <name>Nexus aliyun</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
-            <layout>default</layout>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
         </repository>
     </repositories>
+<!--    <repositories>-->
+<!--        <repository>-->
+<!--            <id>tusdao</id>-->
+<!--            <name>Tusdao Repository</name>-->
+<!--            <url>http://maven.tusdao.com:8082/nexus/content/groups/public/</url>-->
+<!--            <snapshots>-->
+<!--                <enabled>false</enabled>-->
+<!--            </snapshots>-->
+<!--            <releases>-->
+<!--                <enabled>true</enabled>-->
+<!--            </releases>-->
+<!--            <layout>default</layout>-->
+<!--        </repository>-->
+<!--    </repositories>-->
 </project>
