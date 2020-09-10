@@ -9,6 +9,7 @@
         <module>springcloud-provider</module>
         <module>springcloud-api-common</module>
         <module>springcloud-consumer</module>
+        <module>springcloud-zuul</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
