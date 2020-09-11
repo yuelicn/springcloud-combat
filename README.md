@@ -6,6 +6,7 @@
 
 ### 三、springcloud-api-common
 1、主要是一些公共类
+2、实现分布式id生成器
 
 ### 四、springcloud-consumer
 1、引入注册中心实现注册 <br/>
@@ -19,5 +20,7 @@
 ### 六、springcloud-zuul 
 1、引入注册中心实现注册 <br/>
 2、实现token权限拦截、可配置放行白名单
+3、为请求提供Hystrix降级
+4、添加跨域功能
 
 ## 持续更新中……
