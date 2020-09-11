@@ -20,7 +20,7 @@ spring:
 
 zuul:
   routes:
-    doctor:
+    combat:
       path: /combat/**
       strip-prefix: true
       serviceId: SPRINGCLOUD-CONSUMER
