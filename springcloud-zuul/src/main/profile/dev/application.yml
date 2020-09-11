@@ -30,7 +30,10 @@ zuul:
     connect-timeout-millis: 70000
     socket-timeout-millis: 60000
   ribbon-isolation-strategy: thread
-
+  ## 将默认延迟加载改为立即加载，以防止第一次访问应用时超市的现象
+  ribbon:
+    eager-load:
+      enabled: true
 
 
 
