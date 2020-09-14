@@ -26,6 +26,16 @@
             <artifactId>druid-spring-boot-starter</artifactId>
             <version>${druid.springboot.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.springcloud</groupId>
+            <artifactId>springcloud-api-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
 </project>
