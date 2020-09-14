@@ -6,7 +6,10 @@
 
 ### 三、springcloud-api-common
 1、主要是一些公共类<br/>
-2、实现分布式id生成器<br/>
+2、实现分布式id生成器工具类<br/>
+3、业务异常封装工具类<br/>
+4、获取请求真实IP工具类<br/>
+5、实现图片生成器的工具类<br/>
 
 ### 四、springcloud-consumer
 1、引入注册中心实现注册 <br/>
