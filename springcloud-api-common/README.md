@@ -3,3 +3,5 @@
 `com.springcloud.common.response#ResponseData` 
 ## 二、实现分布式ID方式
 `com.springcloud.common.key`
+## 三、实现图片验证码工具类
+`com.springcloud.common.captcha.image`
