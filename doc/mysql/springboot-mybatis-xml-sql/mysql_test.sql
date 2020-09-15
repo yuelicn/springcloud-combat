@@ -19,10 +19,10 @@
 -- Table structure for table `new_table`
 --
 
-DROP TABLE IF EXISTS `new_table`;
+DROP TABLE IF EXISTS `user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `new_table` (
+CREATE TABLE `user` (
   `id` bigint(10) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `name` varchar(45) COLLATE utf8_bin DEFAULT NULL COMMENT '名称',
   `address` varchar(45) COLLATE utf8_bin DEFAULT NULL COMMENT '地址',
@@ -34,13 +34,13 @@ CREATE TABLE `new_table` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `new_table`
+-- Dumping data for table `user`
 --
 
-LOCK TABLES `new_table` WRITE;
-/*!40000 ALTER TABLE `new_table` DISABLE KEYS */;
-INSERT INTO `new_table` VALUES (1,'test','test',0,'2020-09-14 13:38:40','2020-09-14 13:38:40');
-/*!40000 ALTER TABLE `new_table` ENABLE KEYS */;
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (1,'test','test',0,'2020-09-14 13:38:40','2020-09-14 13:38:40');
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
