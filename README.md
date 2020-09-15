@@ -2,6 +2,7 @@
 ### 一、doc
 1、deploy-shell: 提供一个简单部署shell脚本<br/>
 2、mybatis-generator: 生成mybatis mapping 文件的工具类（mysql）<br/>
+3、mysql: springboot-mybatis-xml-sql: 存放springboot-mubatis-xml功能的测试sql脚本
 
 ### 二、springcloud-eureka
 1、eureka server端服务，并对其参数进行优化，可直接用于生产环境<br/>
@@ -33,5 +34,12 @@
 1、集成 mysql + durid <br/>
 2、集成 mybatis (xml方式)<br/>
 3、实现一个简单查找功能&测试方法
+### 二、springboot集成mybatis(多数据源)
+1、集成 mysql + durid （两个数据源）<br/>
+2、集成 mybatis (xml方式) + 多数据源<br/>
+3、实现一个简单查找功能&测试多数据源
+注意事项：
+1、多数据源配置时必须指定一个主数据源（@Primary）
+2、非主数据源在使用事物时必须指定数据源如：（@Transactional(value = "testTransactionManager")）
 
 ## 持续更新中……
