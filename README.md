@@ -44,9 +44,9 @@
 2、非主数据源在使用事物时必须指定数据源如：（@Transactional(value = "testTransactionManager")）
 
 ### 三、springboot集成webservice axis
-#####集成步骤：
+##### 集成步骤：
 1、需要引入对应的jar, 请查看pom <br/>
-2、需要从写`org.apache.axis.configuration.EngineConfigurationFactoryServlet.java` 项目中的可以直接copy过去用 <br/>
+2、需要重写`org.apache.axis.configuration.EngineConfigurationFactoryServlet.java` 项目中的可以直接copy过去用 <br/>
 3、启动类添加 `@ServletComponentScan` 注解 <br/>
 4、创建`WebServlet.java` <br/>
 5、创建对应暴露的接口 <br/>
