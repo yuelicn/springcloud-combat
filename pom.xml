@@ -12,6 +12,7 @@
         <module>springcloud-zuul</module>
         <module>springboot-mybatis-xml</module>
         <module>springboot-mybatis-xml-multipledatasources</module>
+        <module>springboot-webservice-axis</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -36,6 +37,13 @@
         <swagger.models.version>1.5.22</swagger.models.version>
         <mybatis.springboot.start.version>2.1.3</mybatis.springboot.start.version>
         <druid.springboot.version>1.1.23</druid.springboot.version>
+        <!-- axis 版本 -->
+        <apache.axis.version>1.4</apache.axis.version>
+        <axis.jaxrpc.version>1.4</axis.jaxrpc.version>
+        <wsdl4j.version>1.6.3</wsdl4j.version>
+        <commons.discovery.version>0.5</commons.discovery.version>
+
+
     </properties>
 
     <dependencies>
