@@ -34,12 +34,25 @@
 1、集成 mysql + durid <br/>
 2、集成 mybatis (xml方式)<br/>
 3、实现一个简单查找功能&测试方法
+
 ### 二、springboot集成mybatis(多数据源)
 1、集成 mysql + durid （两个数据源）<br/>
 2、集成 mybatis (xml方式) + 多数据源<br/>
 3、实现一个简单查找功能&测试多数据源
 注意事项：
-1、多数据源配置时必须指定一个主数据源（@Primary）
+1、多数据源配置时必须指定一个主数据源（@Primary）<br/>
 2、非主数据源在使用事物时必须指定数据源如：（@Transactional(value = "testTransactionManager")）
+
+### 三、springboot集成webservice axis
+#####集成步骤：
+1、需要引入对应的jar, 请查看pom <br/>
+2、需要从写`org.apache.axis.configuration.EngineConfigurationFactoryServlet.java` 项目中的可以直接copy过去用 <br/>
+3、启动类添加 `@ServletComponentScan` 注解 <br/>
+4、创建`WebServlet.java` <br/>
+5、创建对应暴露的接口 <br/>
+6、创建server-config.wsdd文件配置暴露的service，在resource/WEB-INF下 <br/>
+7、请求路径`http://localhost:8090/axis/services/axis_test?wsdl` <br/>
+到此springboot整合webservice完成 <br/>
+
 
 ## 持续更新中……
