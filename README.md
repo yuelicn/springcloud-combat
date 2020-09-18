@@ -38,8 +38,8 @@
 ### 二、springboot集成mybatis(多数据源)
 1、集成 mysql + durid （两个数据源）<br/>
 2、集成 mybatis (xml方式) + 多数据源<br/>
-3、实现一个简单查找功能&测试多数据源
-注意事项：
+3、实现一个简单查找功能&测试多数据源 <br/>
+注意事项：<br/>
 1、多数据源配置时必须指定一个主数据源（@Primary）<br/>
 2、非主数据源在使用事物时必须指定数据源如：（@Transactional(value = "testTransactionManager")）
 
@@ -54,5 +54,13 @@
 7、请求路径`http://localhost:8090/axis/services/axis_test?wsdl` <br/>
 到此springboot整合webservice完成 <br/>
 
+### 四、springboot集成webservice cxf
+##### 集成步骤
+1、需要引入对应的jar, 请查看pom <br/>
+2、cxf的集成全部支持注解，这里注意配置两个配置类就好 <br/>
+2.1、`com.springboot.webservice.cxf.config.CxfConfig` servlet配置以及监听<br/>
+2.2、`com.springboot.webservice.cxf.config.ServerNameSpaceInterceptor` 去掉命名空间的拦截器<br/>
+3、其它的service等直接使用注解就可以。<br/>
+7、请求路径`http://127.0.0.1:8030/cxf/services/hello_word?wsdl`
 
 ## 持续更新中……
