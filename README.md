@@ -61,6 +61,13 @@
 2.1、`com.springboot.webservice.cxf.config.CxfConfig` servlet配置以及监听<br/>
 2.2、`com.springboot.webservice.cxf.config.ServerNameSpaceInterceptor` 去掉命名空间的拦截器<br/>
 3、其它的service等直接使用注解就可以。<br/>
-7、请求路径`http://127.0.0.1:8030/cxf/services/hello_word?wsdl`
+7、请求路径`http://127.0.0.1:8030/cxf/services/hello_word?wsdl` <br/>
+
+### 五、springboot 数据字典生成工具
+这个是一个开源的小工具，自动生成数据库字典文档，使用非常简单，工作中感觉使用非常方便，<br/>
+紧在此整理下：开源地址：`https://github.com/pingfangushi/screw` <br/>
+1、测试示例在`com.example.screw.config.DocExecuteTest#` 修改下数据库就和一些配置就可以直接使用。 <br/>
+
+
 
 ## 持续更新中……
