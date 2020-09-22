@@ -14,6 +14,7 @@
         <module>springboot-mybatis-xml-multipledatasources</module>
         <module>springboot-webservice-axis</module>
         <module>springboot-webservice-cxf</module>
+        <module>springboot-data-dictionary</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -44,6 +45,10 @@
         <axis.jaxrpc.version>1.4</axis.jaxrpc.version>
         <wsdl4j.version>1.6.3</wsdl4j.version>
         <commons.discovery.version>0.5</commons.discovery.version>
+        <!-- screw 版本 -->
+        <screw.core.version>1.0.5</screw.core.version>
+        <org.freemarker.version>2.3.30</org.freemarker.version>
+
 
 
     </properties>
