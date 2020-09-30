@@ -23,13 +23,13 @@ public class DocExecuteTest {
         DataSource dataSourceMysql = applicationContext.getBean(DataSource.class);
         DocExecute.Config config = new DocExecute().new Config();
         config.setDataSource(dataSourceMysql);
-        config.setDocName("用户中心数据库字典");
-        config.setDescription("用户中心数据库字典文档");
+        config.setDocName("可信数据交换数据库字典");
+        config.setDescription("可信数据交换据库字典文档");
         config.setFileType(EngineFileType.WORD);
-        config.setLocalDir("/Users/yueli/work/document");
+        config.setLocalDir("/Users/yueli/work/document/tusdao/hl/database");
         config.setVersion("1.0.0");
         config.setIgnoreTableName(Arrays.asList("aa","test_group"));
-        config.setIgnorePrefix(Arrays.asList("a","t"));
+        config.setIgnorePrefix(Arrays.asList("t"));
         config.setIgnoreSuffix(Arrays.asList("_test","czb_"));
         DocExecute.generateDoc(config);
 

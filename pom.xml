@@ -15,6 +15,7 @@
         <module>springboot-webservice-axis</module>
         <module>springboot-webservice-cxf</module>
         <module>springboot-data-dictionary</module>
+        <module>springcloud-zuul-dynamic-route</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
