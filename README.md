@@ -2,7 +2,8 @@
 ### 一、doc
 1、deploy-shell: 提供一个简单部署shell脚本<br/>
 2、mybatis-generator: 生成mybatis mapping 文件的工具类（mysql）<br/>
-3、mysql: springboot-mybatis-xml-sql: 存放springboot-mubatis-xml功能的测试sql脚本
+3、mysql: springboot-mybatis-xml-sql: 存放springboot-mubatis-xml功能的测试sql脚本<br/>
+4、gateway-route：添加实现动态路由所有要的创建表sql语句<br/>
 
 ### 二、springcloud-eureka
 1、eureka server端服务，并对其参数进行优化，可直接用于生产环境<br/>
@@ -28,6 +29,10 @@
 2、实现token权限拦截filter、可配置白名单 <br/>
 3、集成Hystrix实现请求降级 <br/>
 4、实现跨域功能 <br/>
+
+### 七、springcloud-zuul-dynamic-route
+1、zuul结合数据库实现动态路由功能<br/>
+2、生产级别的(当然也可以结合配置中心如：apollo 实现，原理都一样)
 
 ## spring boot 功能
 ### 一、springboot集成mybatis
